@@ -4,7 +4,6 @@ date: 2019-06-18 20:29:49
 tags:
 	- Java
 	- Java虚拟机
-	- JVM
 	- OOM
 categories:
 	- 深入理解Java虚拟机

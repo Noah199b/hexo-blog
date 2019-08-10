@@ -2,9 +2,7 @@
 title: 垃圾收集器（Garbage Collection，GC）与内存分配策略（十）
 date: 2019-07-04 21:17:17
 tags:
-	- Java
 	- Java虚拟机
-	- JVM
 	- 内存分配策略
 categories:
 	- 深入理解Java虚拟机
