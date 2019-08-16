@@ -31,7 +31,7 @@ categories:
 
 **抽象工厂**
 
-```
+```java
 public interface AbstractFactory{
     public AbstractProductA createProdectA();//工厂方法一
     public AbstractProductB createProdectB();//工厂方法二
@@ -41,7 +41,7 @@ public interface AbstractFactory{
 
 **具体工厂**
 
-```
+```java
 public class ConcreteFactory implements AbstractFactory{
     public AbstractProductA createProdectA(){
         return new ConcreteProductA1();
@@ -59,7 +59,7 @@ public class ConcreteFactory implements AbstractFactory{
 
 **抽象产品**
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 /**
@@ -70,7 +70,7 @@ public interface Button {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 /**
@@ -81,7 +81,7 @@ public interface TextField {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 /**
@@ -94,7 +94,7 @@ public interface ComboBox {
 
 **具体产品**
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SpringButton implements Button {
@@ -104,7 +104,7 @@ public class SpringButton implements Button {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SummerButton implements Button {
@@ -114,7 +114,7 @@ public class SummerButton implements Button {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SpringTextField implements TextField {
@@ -124,7 +124,7 @@ public class SpringTextField implements TextField {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SummerTextField implements TextField {
@@ -134,7 +134,7 @@ public class SummerTextField implements TextField {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SpringComboBox implements ComboBox {
@@ -144,7 +144,7 @@ public class SpringComboBox implements ComboBox {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SummerComboBox implements ComboBox {
@@ -156,7 +156,7 @@ public class SummerComboBox implements ComboBox {
 
 **抽象工厂**
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 /**
@@ -171,7 +171,7 @@ public interface SkinFactory {
 
 **具体工厂**
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SpringSkinFactory implements SkinFactory {
@@ -189,7 +189,7 @@ public class SpringSkinFactory implements SkinFactory {
 }
 ```
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 public class SummerSkinFactory implements SkinFactory {
@@ -209,7 +209,7 @@ public class SummerSkinFactory implements SkinFactory {
 
 **示例**
 
-```
+```java
 package cn.secretseater.designpattern.abstractfactorypattern;
 
 import cn.secretseater.designpattern.util.XMLUtil;
