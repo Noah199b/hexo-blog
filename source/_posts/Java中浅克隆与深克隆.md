@@ -1,4 +1,5 @@
 ---
+
 title: Java中浅克隆与深克隆
 date: 2019-08-17 12:34:29
 tags:
@@ -121,6 +122,42 @@ public class Gender implements Serializable {
    //省略toString()方法
 }
 ```
+```java
+package cn.secretseater.clone;
+
+public class DeepClone {
+    public static void main(String[] args) {
+        Gender gender = new Gender();
+        gender.setGender('m');
+        Person person = new Person();
+        person.setName("Tom");
+        person.setGender(gender);
+        System.out.println("-------------原型对象-------------");
+        System.out.println(person);
+
+        try {
+            Person clonePerson = person.deepClone();
+            System.out.println("-------------克隆对象-------------");
+            System.out.println(clonePerson);
+
+            System.out.println("-------------修改引用-------------");
+            clonePerson.getGender().setGender('f');
+            clonePerson.setName("Jerry");
+
+            System.out.println("修改后......");
+            System.out.println("-------------原型对象-------------");
+            System.out.println(person);
+            System.out.println("-------------克隆对象-------------");
+            System.out.println(clonePerson);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("克隆失败！");
+        }
+    }
+}
+```
+
 ```
 # 运行结果：
 -------------原型对象-------------
